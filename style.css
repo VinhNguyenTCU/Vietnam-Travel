@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", Arial;
+}
+
+:root{
+    --primary-color: #f3eae5;
+    --text-dark: #2c2724;
+    --white: #ffff;
+    --max-width: 1200px;
+}
+
+img{
+    display: flex;
+    width: 100%;
+}
+
+.btn{
+    outline: none;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav{
+    position: fixed;
+    isolation: isolate;
+    width: 100%;
+    z-index: 9;
+}
+
+.nav-header{
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--text-dark)
+}
+
+.nav-logo a{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.nav-menu-btn{
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.nav-links{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--text-dark);
+    transition: 0.5s;
+    z-index: -1;
+    transform: translateY(-100%);
+}
+
+.nav-links.open{
+    transform: translateY(0);
+}
+
+.nav-links a{
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.nav-links a:hover{
+    color: var(--white);
+}
+
+.nav-btns{
+    display: none;
+}
+
+.container{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 0;
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.container-left{
+    padding-inline: 1rem;
+    text-align: center;
+}
+
+@media (width > 768px){
+    nav{
+        position: static;
+        padding: 2rem 1rem;
+        max-width: var(--max-width);
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .nav-header{
+        flex: 1;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .nav-logo a {
+        color: var(--text-dark);
+    }
+
+    .nav-menu-btn{
+        display: none;
+    }
+
+    .nav-links{
+        position: static;
+        padding: 0;
+        flex-direction: row;
+        background-color: transparent;
+        transform: none;
+    }
+
+    .nav-links a{
+        color: var(--text-dark)
+    }
+
+    .nav-links a:hover{
+        color: var(--text-dark);
+        text-decoration: solid underline var(--text-dark) 2px;
+        text-underline-offset: 4px;
+        transition: 0.3s;
+    }
+
+    .nav-btns{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav-btns .btn{
+        font-size: 1.5rem;
+        color: var(--text-dark);
+        background-color: transparent;
+    }
+}
