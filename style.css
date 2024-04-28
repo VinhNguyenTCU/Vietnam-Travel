@@ -8,7 +8,7 @@
 }
 
 :root{
-    --primary-color: #f3eae5;
+    --primary-color: #3d3d3d;
     --text-dark: #2c2724;
     --white: #ffff;
     --max-width: 1200px;
@@ -111,6 +111,99 @@ nav{
     text-align: center;
 }
 
+.container-left h1{
+    margin-bottom: 2rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    color: var(--text-dark);
+}
+
+.container-left .btn{
+    padding: 1rem 2rem;
+    letter-spacing: 2px;
+    color: var(--white);
+    background-color: var(--text-dark);
+}
+
+.container-left .btn:hover{
+    background-color: var(--primary-color);
+    color: var(--text-dark);
+}
+
+.container-right{
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    gap: 2rem;
+}
+
+.container-right::before{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    transform-origin: left;
+    height: 80%;
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    z-index: -1;
+
+    animation: show .75s 1.25s ease-in-out forwards;
+}
+
+@keyframes show{
+    0%{
+        width: 100%;
+    }
+
+    100%{
+        width: calc(100% - 2rem);
+    }
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic-1{
+    max-width: 500px;
+    transform: translateX(2rem);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgb(0,0,0, 0.2);
+}
+
+.pic-3{
+    max-width: 400px;
+    transform: translate(-3rem, 6rem);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgb(0,0,0, 0.2);
+}
+
+.content{
+    margin-top: 3rem;
+    text-align: justify;
+}
+
+.content h4{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.content p{
+    margin-bottom: 2rem;
+    color: white;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+
 @media (width > 768px){
     nav{
         position: static;
@@ -167,5 +260,31 @@ nav{
         font-size: 1.5rem;
         color: var(--text-dark);
         background-color: transparent;
+    }
+
+    .container{
+        grid-template-columns: 2fr 3fr;
+        align-items: center;
+        padding: 2rem 0;
+    }
+
+    .content p{
+        text-align: justify;
+        display: flex;
+        align-items: center;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .pic-1{
+        max-width: 400px;
+        height: 400px;
+        transform: translateX(2rem);
+    }
+
+    .pic-3{
+        max-width: 300px;
+        height: 200px;
+        transform: translate(-3rem,8rem);
     }
 }
