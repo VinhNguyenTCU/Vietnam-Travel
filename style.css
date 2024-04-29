@@ -154,7 +154,11 @@ nav{
     animation: show .75s 1.25s ease-in-out forwards;
 }
 
-.location i, .social i{
+.content h4{
+    font-size: 2rem;
+}
+
+.location i{
     font-size: 24px;
 }
 
@@ -177,12 +181,38 @@ nav{
 .location:hover{
     background-color: var(--text-dark);
     color: var(--primary-color);
+
 }
 
 .social{
     position: absolute;
     right: 1rem;
-    bottom: 1rem;
+    bottom: 2rem;
+}
+
+.social i{
+    font-size: 2rem;
+}
+
+.social span{
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.ri-facebook-circle-fill{
+    color: #1877F2;
+}
+
+.ri-instagram-fill{
+    background-color:rgb(249,206,52);
+    background-image: linear-gradient(90deg, rgba(249,206,52,1) 0%, rgba(238,42,123,1) 50%, rgba(98,40,215,1) 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
 }
 
 @keyframes show{
@@ -208,11 +238,13 @@ nav{
     box-shadow: 5px 5px 20px rgb(0,0,0, 0.2);
 }
 
-.pic-3{
+.pic-4{
+    position: relative; 
     max-width: 400px;
-    transform: translate(-3rem, 6rem);
+    left: -2rem;
+    top: 3rem;
     border-radius: 1rem;
-    box-shadow: 5px 5px 20px rgb(0,0,0, 0.2);
+    box-shadow: 2px 2px 3px rgb(0,0,0, 0.2);
 }
 
 .content{
@@ -309,13 +341,27 @@ nav{
 
     .pic-1{
         max-width: 400px;
-        height: 400px;
-        transform: translateX(2rem);
+        height: 300px;
+        z-index: 2;
+        cursor: pointer;
     }
 
-    .pic-3{
-        max-width: 300px;
-        height: 200px;
-        transform: translate(-3rem,8rem);
+    .pic-4{
+        max-width: 400px;
+        height: 300px;
+        position: relative;
+        top: r5em;
+        left: -3.5rem;
+        cursor: pointer;
+    }
+
+    .location{
+        position: absolute;
+        bottom: 2px;
+    }
+
+    .social{
+        position: absolute;
+        bottom: 1px;
     }
 }

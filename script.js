@@ -36,7 +36,7 @@ ScrollReveal().reveal(".container-right .pic-1",{
     ...scrollRevealOption,
     delay: 1000,
 });
-ScrollReveal().reveal(".container-right .pic-3",{
+ScrollReveal().reveal(".container-right .pic-4",{
     ...scrollRevealOption,
     delay: 1500,
 });
@@ -47,6 +47,10 @@ ScrollReveal().reveal(".container-right p",{
 });
 
 ScrollReveal().reveal(".location",{
+    ...scrollRevealOption,
+    delay: 2900,
+});
+ScrollReveal().reveal(".social",{
     ...scrollRevealOption,
     delay: 2900,
 });
