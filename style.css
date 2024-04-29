@@ -8,7 +8,7 @@
 }
 
 :root{
-    --primary-color: #3d3d3d;
+    --primary-color: #ebe2e2;
     --text-dark: #2c2724;
     --white: #ffff;
     --max-width: 1200px;
@@ -154,6 +154,37 @@ nav{
     animation: show .75s 1.25s ease-in-out forwards;
 }
 
+.location i, .social i{
+    font-size: 24px;
+}
+
+.location{
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    padding: 1rem 2rem 1rem 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    background-color:var(--primary-color);
+    border: 10px var(--white);
+    cursor: pointer;
+}
+
+.location:hover{
+    background-color: var(--text-dark);
+    color: var(--primary-color);
+}
+
+.social{
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+}
+
 @keyframes show{
     0%{
         width: 100%;
@@ -193,14 +224,14 @@ nav{
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
-    color: var(--white);
+    color: var(--text-dark);
 }
 
 .content p{
     margin-bottom: 2rem;
-    color: white;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    color: var(--text-dark);
+    padding: 0 3rem;;
+    font-weight: 400;
 }
 
 
